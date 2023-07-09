@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>文字上下浮动动画</title>
+</head>
+<!-- css -->
+<style type="text/css">
+	body{
+		background: black;
+	}
+	#l{animation:l 2s 100 forwards;text-shadow: 5px 5px 5px gold;}
+		@keyframes l{
+			10%{transform: translateY(-200px);text-shadow: 5px 5px 20px red;}
+			100%{transform: translateY(0px);text-shadow: 5px 5px 5px red;}
+		}
+	#o{animation:o 2s 100 forwards;text-shadow: 5px 5px 5px aqua;}
+			@keyframes o{
+			20%{transform: translateY(-200px);text-shadow: 5px 5px 20px aqua;}
+			100%{transform: translateY(0px);text-shadow: 5px 5px 5px aqua;}
+		}
+	#d{animation:d 2s 100 forwards;text-shadow: 5px 5px 5px red;}
+			@keyframes d{
+			30%{transform: translateY(-200px);text-shadow: 5px 5px 20px red;}
+			100%{transform: translateY(0px);text-shadow: 5px 5px 5px red;}
+		}
+	#i{animation:i 2s 100 forwards;text-shadow: 5px 5px 5px red;}
+			@keyframes i{
+			40%{transform: translateY(-200px);text-shadow: 5px 5px 20px red;}
+			100%{transform: translateY(0px);text-shadow: 5px 5px 5px red;}
+		}
+	#n{animation:n 2s 100 forwards;text-shadow: 5px 5px 5px red;}
+			@keyframes n{
+			50%{transform: translateY(-200px);text-shadow: 5px 5px 20px red;}
+			100%{transform: translateY(0px);text-shadow: 5px 5px 5px red;}
+		}
+	#g{animation:g 2s 100 forwards;text-shadow: 5px 5px 5px red;}
+			@keyframes g{
+			60%{transform: translateY(-200px);text-shadow: 5px 5px 20px red;}
+			100%{transform: translateY(0px);text-shadow: 5px 5px 5px red;}
+		}
+	@media screen and (min-width: 1330px){
+		#box{
+		height: 250px;
+		margin-top: 25%;
+		}
+		#rot{
+			width: 1330px;
+			position: relative;
+			margin: 0 auto;
+		}
+		.yun{
+			float: left;
+			font-size: 150px;
+			margin-left: 120px;
+			color: white;
+			border-radius: 20px;
+		}
+	}
+	@media screen and (min-width: 768px) and (max-width: 1330px){
+		#box{
+		height: 250px;
+		margin-top: 45%;
+		}
+		#rot{
+			width: 768px;
+			position: relative;
+			margin: 0 auto;
+		}
+		.yun{
+			float: left;
+			font-size: 70px;
+			margin-left: 80px;
+			color: white;
+			border-radius: 20px;
+		}
+	}
+	@media screen and (max-width: 768px){
+		#box{
+		height: 250px;
+		margin-top: 80%;
+		}
+		#rot{
+			width: 480px;
+			position: relative;
+			margin: 0 auto;
+		}
+		.yun{
+			float: left;
+			font-size: 50px;
+			margin-left: 40px;
+			color: white;
+			border-radius: 20px;
+		}
+	}
+</style>
+<!-- js -->
+<body>
+	<div id="box">
+		<div id="rot">
+			<span class="yun" id="l">L</span>
+			<span class="yun" id="o">O</span>
+			<span class="yun" id="d">D</span>
+			<span class="yun" id="i">I</span>
+			<span class="yun" id="n">N</span>
+			<span class="yun" id="g">G</span>
+		</div>
+	</div>
+</body>
+</html>
