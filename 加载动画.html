@@ -3,108 +3,109 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>文字上下浮动动画</title>
+	<title>加载动画</title>
 </head>
 <!-- css -->
 <style type="text/css">
-	body{
-		background: black;
+/*背景颜色*/
+body{
+	background: black;
+}
+#loading{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 9999;
+	background: rgba(0, 0, 0, 0.5);
+	font-size: 25px;
+	color: greenyellow;
+	text-align: center;
+/*	display: none;*/
+}
+/*加载动画*/
+/*每一个字母的动画*/
+#l{animation:l 2s 100 forwards;text-shadow: 5px 5px 5px gold;}
+	@keyframes l{
+		10%{transform: translateY(-60px);text-shadow: 5px 5px 20px red;}
+		100%{transform: translateY(0px);text-shadow: 5px 5px 5px red;}
 	}
-	#l{animation:l 2s 100 forwards;text-shadow: 5px 5px 5px gold;}
-		@keyframes l{
-			10%{transform: translateY(-200px);text-shadow: 5px 5px 20px red;}
-			100%{transform: translateY(0px);text-shadow: 5px 5px 5px red;}
-		}
-	#o{animation:o 2s 100 forwards;text-shadow: 5px 5px 5px aqua;}
-			@keyframes o{
-			20%{transform: translateY(-200px);text-shadow: 5px 5px 20px aqua;}
-			100%{transform: translateY(0px);text-shadow: 5px 5px 5px aqua;}
-		}
-	#d{animation:d 2s 100 forwards;text-shadow: 5px 5px 5px red;}
-			@keyframes d{
-			30%{transform: translateY(-200px);text-shadow: 5px 5px 20px red;}
-			100%{transform: translateY(0px);text-shadow: 5px 5px 5px red;}
-		}
-	#i{animation:i 2s 100 forwards;text-shadow: 5px 5px 5px red;}
-			@keyframes i{
-			40%{transform: translateY(-200px);text-shadow: 5px 5px 20px red;}
-			100%{transform: translateY(0px);text-shadow: 5px 5px 5px red;}
-		}
-	#n{animation:n 2s 100 forwards;text-shadow: 5px 5px 5px red;}
-			@keyframes n{
-			50%{transform: translateY(-200px);text-shadow: 5px 5px 20px red;}
-			100%{transform: translateY(0px);text-shadow: 5px 5px 5px red;}
-		}
-	#g{animation:g 2s 100 forwards;text-shadow: 5px 5px 5px red;}
-			@keyframes g{
-			60%{transform: translateY(-200px);text-shadow: 5px 5px 20px red;}
-			100%{transform: translateY(0px);text-shadow: 5px 5px 5px red;}
-		}
-	@media screen and (min-width: 1330px){
-		#box{
-		height: 250px;
-		margin-top: 25%;
-		}
-		#rot{
-			width: 1330px;
-			position: relative;
-			margin: 0 auto;
-		}
-		.yun{
-			float: left;
-			font-size: 150px;
-			margin-left: 120px;
-			color: white;
-			border-radius: 20px;
-		}
+#o{animation:o 2s 100 forwards;text-shadow: 5px 5px 5px aqua;}
+		@keyframes o{
+		20%{transform: translateY(-60px);text-shadow: 5px 5px 20px aqua;}
+		100%{transform: translateY(0px);text-shadow: 5px 5px 5px aqua;}
 	}
-	@media screen and (min-width: 768px) and (max-width: 1330px){
-		#box{
-		height: 250px;
-		margin-top: 45%;
-		}
-		#rot{
-			width: 768px;
-			position: relative;
-			margin: 0 auto;
-		}
-		.yun{
-			float: left;
-			font-size: 70px;
-			margin-left: 80px;
-			color: white;
-			border-radius: 20px;
-		}
+#a{animation:a 2s 100 forwards;text-shadow: 5px 5px 5px orange;}
+	@keyframes a{
+	20%{transform: translateY(-60px);text-shadow: 5px 5px 20px orange;}
+	100%{transform: translateY(0px);text-shadow: 5px 5px 5px orange;}
+}
+#d{animation:d 2s 100 forwards;text-shadow: 5px 5px 5px white;}
+		@keyframes d{
+		30%{transform: translateY(-60px);text-shadow: 5px 5px 20px hotpink;}
+		100%{transform: translateY(0px);text-shadow: 5px 5px 5px hotpink;}
 	}
-	@media screen and (max-width: 768px){
-		#box{
-		height: 250px;
-		margin-top: 80%;
-		}
-		#rot{
-			width: 480px;
-			position: relative;
-			margin: 0 auto;
-		}
-		.yun{
-			float: left;
-			font-size: 50px;
-			margin-left: 40px;
-			color: white;
-			border-radius: 20px;
-		}
+#i{animation:i 2s 100 forwards;text-shadow: 5px 5px 5px blueviolet;}
+		@keyframes i{
+		40%{transform: translateY(-60px);text-shadow: 5px 5px 20px gold;}
+		100%{transform: translateY(0px);text-shadow: 5px 5px 5px gold;}
 	}
+#n{animation:n 2s 100 forwards;text-shadow: 5px 5px 5px hotpink;}
+		@keyframes n{
+		50%{transform: translateY(-60px);text-shadow: 5px 5px 20px greenyellow;}
+		100%{transform: translateY(0px);text-shadow: 5px 5px 5px greenyellow;}
+	}
+#g{animation:g 2s 100 forwards;text-shadow: 5px 5px 5px cornsilk;}
+		@keyframes g{
+		60%{transform: translateY(-60px);text-shadow: 5px 5px 20px cornsilk;}
+		100%{transform: translateY(0px);text-shadow: 5px 5px 5px cornsilk;}
+	}
+/*中等屏幕自适应*/
+@media screen and (min-width: 480px) and (max-width: 2000px){
+	#loadingbox{
+	margin: auto;
+	height: 250px;
+	margin-top: 300px;
+	}
+	.yun{
+		display: inline-block;
+		font-size: 50px;
+		margin-left: 10px;
+		color: white;
+		border-radius: 20px;
+	}
+}
+/*小屏幕自适应*/
+@media screen and (max-width: 480px){
+	#loadingbox{
+	margin: auto;
+	height: 250px;
+	margin-top: 300px;
+	}
+	.yun{
+		display: inline-block;
+		font-size: 40px;
+		margin-left: 30px;
+		color: white;
+		border-radius: 20px;
+	}
+}
 </style>
-<!-- js -->
 <body>
-	<div id="box">
-		<div id="rot">
-			<span class="yun" id="l">L</span>
-			<span class="yun" id="o">O</span>
-			<span class="yun" id="d">D</span>
-			<span class="yun" id="i">I</span>
-			<span class="yun" id="n">N</span>
-			<span class="yun" id="g">G</span>
+	<div id="loading">
+		<!-- 定位 位置的 div -->
+		<div id="loadingbox">
+			<div>
+				<span class="yun" id="l">L</span>
+				<span class="yun" id="o">o</span>
+				<span class="yun" id="a">a</span>
+				<span class="yun" id="d">d</span>
+				<span class="yun" id="i">i</span>
+				<span class="yun" id="n">n</span>
+				<span class="yun" id="g">g</span>
+			</div>
 		</div>
 	</div>
 </body>
